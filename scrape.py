@@ -29,6 +29,9 @@ if __name__ == "__main__":
        "https://app.testudo.umd.edu/soc/search?courseId=stat401&sectionId=&termId=202108&_openSectionsOnly=on&creditCompare=&credits=&courseLevelFilter=ALL&instructor=&_facetoface=on&_blended=on&_online=on&courseStartCompare=&courseStartHour=&courseStartMin=&courseStartAM=&courseEndHour=&courseEndMin=&courseEndAM=&teachingCenter=ALL&_classDay1=on&_classDay2=on&_classDay3=on&_classDay4=on&_classDay5=on",
        "JOUR282":
        "https://app.testudo.umd.edu/soc/search?courseId=JOUR282&sectionId=&termId=202108&_openSectionsOnly=on&creditCompare=%3E%3D&credits=0.0&courseLevelFilter=ALL&instructor=&_facetoface=on&_blended=on&_online=on&courseStartCompare=&courseStartHour=&courseStartMin=&courseStartAM=&courseEndHour=&courseEndMin=&courseEndAM=&teachingCenter=ALL&_classDay1=on&_classDay2=on&_classDay3=on&_classDay4=on&_classDay5=on"
+       ,
+       "ENGL394":
+       "https://app.testudo.umd.edu/soc/search?courseId=ENGL394&sectionId=&termId=202108&_openSectionsOnly=on&creditCompare=%3E%3D&credits=0.0&courseLevelFilter=ALL&instructor=&_facetoface=on&_blended=on&_online=on&courseStartCompare=&courseStartHour=&courseStartMin=&courseStartAM=&courseEndHour=&courseEndMin=&courseEndAM=&teachingCenter=ALL&_classDay1=on&_classDay2=on&_classDay3=on&_classDay4=on&_classDay5=on"
     }
     message = ""
     professors = ["Archana Khurana", "Sarah Oates"]
@@ -38,12 +41,13 @@ if __name__ == "__main__":
             name = name.text.strip()
             c_id = c_id.text.strip()
             seats = seats.text.strip()
-            if name in professors:
-                if course == "Stat401" and int(seats) > 0 and name == "Archana Khurana" and c_id == "0401":
-                    message += f"{course}; section {c_id} with {name}: {seats} seat\n"
-                elif course!= "Stat401" and int(seats) > 0:
-                    message += f"{course}; section {c_id} with {name}: {seats} seat\n"
-    
+            #print(f"{course}; section {c_id} with {name}: {seats} seat\n")
+            if course == "Stat401" and int(seats) > 0 and c_id == "0401":
+                message += f"{course}; section {c_id} with {name}: {seats} seat\n"
+            if course == "ENGL394" and int(seats) <= 6 and c_id == "9016":
+                message += f"{course}; section {c_id} with {name}: {seats} seat\n"
+            if course!= "Stat401" and course!="ENGL394" and int(seats) > 0:
+                message += f"{course}; section {c_id} with {name}: {seats} seat\n"
     try:
         log = pickle.load(open("log.p", "rb"))
     except:
