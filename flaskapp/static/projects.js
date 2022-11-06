@@ -39,31 +39,6 @@ app.controller('mainCtrl', function($scope) {
       description: 'Implemented data visualization and developed a Deep Learning NLP Model to predict TSLA (Tesla) stock price using Keras Deep Learning API. Currently working on integrating sentiment analysis for effective stock prediction.',
       link: "https://github.com/Sanjay404/TESLA-KERAS-ANALYSIS"
     },
-    /*{
-    name: 'Playful',
-    image: 'https://source.unsplash.com/b2-fBVrfx0o/900x900'
-  }, {
-    name: 'Grand',
-    image: 'https://source.unsplash.com/Ixp4YhCKZkI/900x900'
-  }, {
-    name: 'Mist',
-    image: 'https://source.unsplash.com/8BmNurlVR6M/900x900'
-  }, {
-    name: 'Sea',
-    image: 'https://source.unsplash.com/6YqpFWWQsno/900x900'
-  }, {
-    name: 'Reach',
-    image: 'https://source.unsplash.com/zFnk_bTLApo/900x900'
-  }, {
-    name: 'Awe',
-    image: 'https://source.unsplash.com/j4PaE7E2_Ws/900x900'
-  }, {
-    name: 'Surf',
-    image: 'https://source.unsplash.com/uohGiEVhWiQ/900x900'
-  }, {
-    name: 'Thrill',
-    image: 'https://source.unsplash.com/ssrbaKvxaos/900x900'
-  },*/
   ];
 
   $scope.selected = [];

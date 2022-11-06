@@ -40,12 +40,12 @@ def text(name , dic, mess_type):
             body+= f"{key}: {dic[key]} \n"
 
     # put your own credentials here
-    account_sid = "ACef4e810916850ca7e12a626e3aa23da8"
-    auth_token = "e7f7bb7c77c78a66de0fa9c9a85c2e4a"
+    account_sid = "#"
+    auth_token = "#"
     client = Client(account_sid, auth_token)
     client.messages.create(
-    to="4433456386",
-    from_="17609144209",
+    to="#",
+    from_="#",
     body=body)
 
 
@@ -62,8 +62,8 @@ if __name__ == '__main__':
     if(current_time.hour == 13):
         print(current_time)
         for key in stocks.keys():
-            text(key, get_stocks("RADHIKA APPLY", 'morning')
+            text(key, get_stocks("RADHIKA APPLY", 'morning'))
     elif(current_time.hour == 20):
         for key in stocks.keys():
-            text(key, get_stocks("RADHIKA APPLY", 'evening')
+            text(key, get_stocks("RADHIKA APPLY", 'evening'))
     

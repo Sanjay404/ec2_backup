@@ -17,10 +17,10 @@ def get_open_sections(url):
 
 
 def text(body):
-    account_sid = "ACef4e810916850ca7e12a626e3aa23da8"
-    auth_token = "779a62194beedc6ea83f7faa5b58703d"
+    account_sid = ""
+    auth_token = ""
     client = Client(account_sid, auth_token)
-    client.messages.create(to="17322087157", from_="17609144209", body=body)
+    client.messages.create(to="#", from_="#", body=body)
 
 
 if __name__ == "__main__":

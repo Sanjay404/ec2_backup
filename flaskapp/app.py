@@ -12,28 +12,11 @@ app.config.update(dict(
     MAIL_SERVER = "localhost",
     MAIL_PORT = 25,
     MAIL_USE_SSL = True,
-    MAIL_USERNAME = 'srikumar.sanjay@gmail.com',
-    MAIL_PASSWORD = 'blaster1',
+    MAIL_USERNAME = '#',
+    MAIL_PASSWORD = '#',
 ))
-
-def send_email(to_email,from_email,mydict):
-  result_dict = {}
-  try:
-      msg = Message("Message from your website",sender=from_email,recipients=[to_email])
-      msg.body="Email from your website"
-      msg.html= render_template("email.html",contact_email=mydict['contact_email'],message=mydict['message'])
-      mail.send(msg)
-      flash("Thanks for contacting me. I will get back to you soon!","success")
-  except Exception as e:
-      flash("Error sending email".format(str(e)),"error")
-
-________________________________________________________________________________
-NOTES:
-routes '/' (which is essentially the landing page)
-________________________________________________________________________________
-Can pass additional arguments to render_template
 EX: 
-temp= "hi"
+temp= "haiiaiaiaaiai "
 render_template("index.html", temp) 
 IN HTML, I use {{temp}}
 '''
