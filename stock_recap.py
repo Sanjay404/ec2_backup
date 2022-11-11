@@ -60,10 +60,9 @@ if __name__ == '__main__':
      
     current_time = datetime.utcnow() #checks UTC time
     if(current_time.hour == 13):
-        print(current_time)
         for key in stocks.keys():
-            text(key, get_stocks("RADHIKA APPLY", 'morning'))
+            text(key, get_stocks(stocks[key]), 'morning')
     elif(current_time.hour == 20):
         for key in stocks.keys():
-            text(key, get_stocks("RADHIKA APPLY", 'evening'))
+            text(key, get_stocks(stocks[key]), 'evening')
     
