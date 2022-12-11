@@ -9,6 +9,6 @@
 - CSS
 
 
-#### a) 
+#### a) Personal Website
 The folder named flaskapp, contains a lightweight flask application thats hosts my personal website. 
 
