@@ -6,6 +6,7 @@
 - JavaScript
 - HTML
 - CSS
+- Angular JS
 - nginx
 - AWS ec2
 - Gunicorn
